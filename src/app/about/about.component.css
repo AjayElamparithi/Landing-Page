@@ -1,0 +1,33 @@
+
+#about{
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 45%;
+}
+.our{
+    margin-top: 10%;
+    margin-left: 35%;
+    
+}
+h4{
+    margin-left: 35%;
+}
+.foot{
+    margin-top: 10%;
+    margin-left: 35%;
+    position: static;
+
+}
+#logo{
+    margin-left: 10%;
+}
+.icons{
+    margin-left: 9%;
+    position:relative ;
+}
+.last{
+    position: relative;
+    overflow: hidden;
+    background-image: url();
+}

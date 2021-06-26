@@ -1,0 +1,24 @@
+<!-- Contact Form -->
+<div class="form col-12">
+    <form [formGroup]="exform" method="POST" (ngSubmit)="onSubmit()">
+      <div class="example-container">
+        <h2>Contact</h2>
+          <mat-form-field>
+            <input formControlName="name" required class="col-form-control" matInput placeholder="Name" id="name">
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+              <input formControlName="email" required class="col-form-control" matInput type="email" placeholder="Email" id="mail">
+            </mat-form-field>
+          <br>
+          <mat-form-field>
+            <mat-select required class="col-form-control" formControlName="gender" placeholder="Gender">
+              <mat-option value="Male">Male</mat-option>
+              <mat-option value="Female">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+      <button type="submit" [disabled]="exform.invalid" mat-raised-button color="primary" id="submit">SUBMIT</button>
+    </form>
+</div>
+

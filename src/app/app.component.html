@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body class="home">
+  <!-- Tool Bar -->
+  <mat-toolbar style="color: rgb(188, 188, 189);" class="mat-elevation-z5">
+    <button (click)="sidenav_opened = !sidenav_opened" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>CLOOBOT</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" routerLink="home">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="about">
+      <mat-icon>dashboard</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" routerLink="contact">
+      <mat-icon>contact_support</mat-icon>
+    </button>
+  </mat-toolbar>
+  <!-- Side Navbar -->
+  <mat-sidenav-container class="col-12"> 
+    <mat-sidenav class="col-sm-3 col-md-2" [(opened)]="sidenav_opened"  #sidenav  mode="side" opened>
+  <mat-nav-list class="items" style="width: 200px;">
+    <a mat-list-item routerLink="home" style="height: 50px;">Home</a>
+    <a mat-list-item routerLink="about" style="height: 50px;">About</a>
+    <a mat-list-item routerLink="contact" style="height: 50px;">Contact Us</a>
+  </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <p style="height:88vh;">
+        <router-outlet></router-outlet>
+      </p>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <!-- SMTPJS -->
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+</body>
+</html>
