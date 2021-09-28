@@ -19,25 +19,18 @@ span{
     font-weight: bold;
 }
 .mat-sidenav {
-    display: none;
+    /* display: none; */
     width: 210px;
-    overflow-y:hidden;
-    overflow-x: hidden;
+    /* overflow-y:hidden; */
+    /* overflow-x: hidden; */
     padding-left: 0%;
     padding-right: 0%;
   }
-@media (min-width: 768px) {
+@media (max-width: 600px) {
 .mat-sidenav {
-      /* position: fixed; */
-      /* top: 51px; */
+
       bottom: 0;
       left: 0;
       z-index: 1000;
-      display: block;
-      /* padding: 20px; */
-      overflow-x: hidden;
-      overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-      /* background-color: #f5f5f5; */
-      /* border-right: 1px solid #eee; */
     }
   }

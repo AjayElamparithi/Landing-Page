@@ -13,4 +13,14 @@ export class AppComponent {
   ngOnInit(): void {
 
   }
+
+  onclick(){
+    if (this.sidenav_opened == true){
+      this.sidenav_opened = false;
+    }else{
+      this.sidenav_opened = true;
+    }
+  }
+
+
 }
